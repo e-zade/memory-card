@@ -1,0 +1,67 @@
+.congrats-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.congrats-modal {
+  background: linear-gradient(135deg, #1e2a3a, #0f1722);
+  padding: 40px 50px;
+  border-radius: 60px;
+  text-align: center;
+  border: 3px solid #f4c542;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.5);
+  animation: bounce 0.5s ease;
+}
+
+.congrats-modal h2 {
+  color: #ffeaac;
+  font-size: 28px;
+  margin: 20px 0;
+}
+
+.congrats-emoji {
+  font-size: 48px;
+}
+
+.play-again-btn {
+  background: #f4c542;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 40px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #1e2a2f;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.2s;
+  box-shadow: 0 4px 0 #a05e15;
+  transform: translateY(-2px);
+}
+
+.play-again-btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 1px 0 #a05e15;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

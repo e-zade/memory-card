@@ -1,0 +1,60 @@
+.card {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-width: 110px;
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.3s;
+  transform-style: preserve-3d;
+  border-radius: 16px;
+}
+
+.card.flipped .card-inner,
+.card.matched .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: bold;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card-front {
+  background: linear-gradient(145deg, #fff2df, #ffe0b5);
+  transform: rotateY(180deg);
+  border: 3px solid #f4c542;
+}
+
+.card-back {
+  background: linear-gradient(145deg, #2c3e4e, #1a2a36);
+  transform: rotateY(0deg);
+  font-size: 48px;
+  color: #f5c542;
+  border: 2px solid rgba(255,215,130,0.5);
+}
+
+.card.matched .card-front {
+  background: linear-gradient(145deg, #8fbc8f, #6f9e6f);
+  border-color: #e9ffb4;
+}
+
+.card.matched {
+  cursor: default;
+  filter: drop-shadow(0 0 6px #b0ff9e);
+}
