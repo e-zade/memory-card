@@ -7,6 +7,7 @@ const Card = ({ emoji, isFlipped, isMatched, onClick, index }) => {
       onClick(index);
     }
   };
+  // hi
 
   return (
     <div 
